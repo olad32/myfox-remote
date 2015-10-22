@@ -37,7 +37,7 @@ public class MainScreen extends AppCompatActivity {
     private void openSettings() {
     }
 
-    public void desactiver(View view) {
+    public void deactivate(View view) {
         //IntentService service
     }
 }

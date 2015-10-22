@@ -21,6 +21,6 @@
         android:id="@+id/btnDesactiver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="desactiver"
-        android:text="@string/btn_desactiver" />
+        android:onClick="deactivate"
+        android:text="@string/deactivate_btn" />
 </LinearLayout>

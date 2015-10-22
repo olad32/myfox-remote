@@ -8,29 +8,25 @@ import android.content.Context;
  * An {@link IntentService} subclass for handling asynchronous task requests in
  * a service on a separate handler thread.
  * <p/>
- * TODO: Customize class - update intent actions, extra parameters and static
  * helper methods.
  */
 public class MyfoxApiService extends IntentService {
-    // TODO: Rename actions, choose action names that describe tasks that this
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
-    private static final String ACTION_FOO = "com.pasteque.myfoxremote.action.FOO";
-    private static final String ACTION_BAZ = "com.pasteque.myfoxremote.action.BAZ";
+    private static final String ACTION_GET_STATUT = "com.pasteque.myfoxremote.action.GET_STATUT";
+    private static final String ACTION_DESACTIVER = "com.pasteque.myfoxremote.action.DESACTIVER";
 
-    // TODO: Rename parameters
     private static final String EXTRA_PARAM1 = "com.pasteque.myfoxremote.extra.PARAM1";
     private static final String EXTRA_PARAM2 = "com.pasteque.myfoxremote.extra.PARAM2";
 
     /**
-     * Starts this service to perform action Foo with the given parameters. If
+     * Starts this service to perform action GET_STATUT with the given parameters. If
      * the service is already performing a task this action will be queued.
      *
      * @see IntentService
      */
-    // TODO: Customize helper method
-    public static void startActionFoo(Context context, String param1, String param2) {
+    public static void startActionGetStatut(Context context, String param1, String param2) {
         Intent intent = new Intent(context, MyfoxApiService.class);
-        intent.setAction(ACTION_FOO);
+        intent.setAction(ACTION_GET_STATUT);
         intent.putExtra(EXTRA_PARAM1, param1);
         intent.putExtra(EXTRA_PARAM2, param2);
         context.startService(intent);
@@ -45,7 +41,7 @@ public class MyfoxApiService extends IntentService {
     // TODO: Customize helper method
     public static void startActionBaz(Context context, String param1, String param2) {
         Intent intent = new Intent(context, MyfoxApiService.class);
-        intent.setAction(ACTION_BAZ);
+        intent.setAction(ACTION_DESACTIVER);
         intent.putExtra(EXTRA_PARAM1, param1);
         intent.putExtra(EXTRA_PARAM2, param2);
         context.startService(intent);
@@ -59,11 +55,11 @@ public class MyfoxApiService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
             final String action = intent.getAction();
-            if (ACTION_FOO.equals(action)) {
+            if (ACTION_GET_STATUT.equals(action)) {
                 final String param1 = intent.getStringExtra(EXTRA_PARAM1);
                 final String param2 = intent.getStringExtra(EXTRA_PARAM2);
                 handleActionFoo(param1, param2);
-            } else if (ACTION_BAZ.equals(action)) {
+            } else if (ACTION_DESACTIVER.equals(action)) {
                 final String param1 = intent.getStringExtra(EXTRA_PARAM1);
                 final String param2 = intent.getStringExtra(EXTRA_PARAM2);
                 handleActionBaz(param1, param2);
