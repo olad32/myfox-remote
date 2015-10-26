@@ -12,11 +12,12 @@ import android.content.Context;
  */
 public class MyfoxApiService extends IntentService {
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
-    private static final String ACTION_GET_STATUT = "com.pasteque.myfoxremote.action.GET_STATUT";
-    private static final String ACTION_DESACTIVER = "com.pasteque.myfoxremote.action.DESACTIVER";
+    public static final String ACTION_IS_LOGGED = "com.pasteque.myfoxremote.action.IS_LOGGED";
+    public static final String ACTION_GET_STATUT = "com.pasteque.myfoxremote.action.GET_STATUT";
+    public static final String ACTION_DESACTIVER = "com.pasteque.myfoxremote.action.DESACTIVER";
 
-    private static final String EXTRA_PARAM1 = "com.pasteque.myfoxremote.extra.PARAM1";
-    private static final String EXTRA_PARAM2 = "com.pasteque.myfoxremote.extra.PARAM2";
+    public static final String EXTRA_PARAM1 = "com.pasteque.myfoxremote.extra.PARAM1";
+    public static final String EXTRA_PARAM2 = "com.pasteque.myfoxremote.extra.PARAM2";
 
     /**
      * Starts this service to perform action GET_STATUT with the given parameters. If
